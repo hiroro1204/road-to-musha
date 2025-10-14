@@ -1,0 +1,103 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+  --color-bg-primary: #c5ab5f;
+  --color-bg-primary-light: rgb(197, 171, 95, 0.1);
+  --color-bg-black: #000000;
+  --color-bg-white: #ffffff;
+  --color-bg-gray: #d1d1d1;
+  --color-bg-gold: #aca56c;
+  --color-bg-orange: #d0a85e;
+  --color-bg-blue: #6c9dac;
+  --color-bg-pink: #ac6ca0;
+  --color-bg-green: #6cac7b;
+  --color-border-gray: #dddddd;
+  --color-border-primary: #c5ab5f;
+  --color-border-white: #ffffff;
+  --color-font-base: #000000;
+  --color-font-white: #ffffff;
+  --color-font-gray: #666666;
+}
+
+/*!
+global > content-width
+------------------------------
+*/
+:root {
+  --width-content-s: 760px;
+  --width-content: 1080px;
+}
+
+/*!
+global > font
+------------------------------
+*/
+:root {
+  --font-family-base: "Noto Sans JP", sans-serif;
+}
+
+body {
+  line-height: 1.75;
+  font-size: 14px;
+  color: var(--color-font-base);
+  font-family: var(--font-family-base);
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.editor-styles-wrapper h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 64px 0px 24px;
+  background-color: var(--color-bg-black);
+  color: var(--color-font-white);
+  padding: 10px 8px;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+@media screen and (min-width: 768px) {
+  .editor-styles-wrapper h2 {
+    font-size: 20px;
+    margin: 80px 0px 24px;
+  }
+}
+.editor-styles-wrapper h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 24px 0px;
+  position: relative;
+  border-bottom: 1px solid var(--color-border-primary);
+  padding-left: 36px;
+  padding-bottom: 6px;
+  line-height: 1.6;
+}
+@media screen and (min-width: 768px) {
+  .editor-styles-wrapper h3 {
+    font-size: 20px;
+    margin: 40px 0px 24px;
+  }
+}
+.editor-styles-wrapper h3::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  transform: translateY(-50%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon-mosha.png);
+}
+@media screen and (min-width: 768px) {
+  .editor-styles-wrapper h3::before {
+    top: 18px;
+  }
+}

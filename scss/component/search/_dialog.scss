@@ -1,0 +1,85 @@
+/*!
+component > search > dialog
+------------------------------
+*/
+
+.c-search-dialog {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: var(--z-index-modal);
+}
+
+.c-search-dialog::backdrop {
+  background: transparent;
+}
+
+.c-modal-bg {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: var(--z-index-modal);
+}
+
+.c-search-dialog-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-search-dialog-content {
+  background-color: var(--color-bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.c-search-dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-bg-gray);
+}
+
+.c-search-dialog-close::before,
+.c-search-dialog-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background-color: var(--color-font-base);
+  translate: -50% -50%;
+}
+
+.c-search-dialog-close::before {
+  transform: rotate(45deg);
+}
+
+.c-search-dialog-close::after {
+  transform: rotate(-45deg);
+}
+
+.c-search-dialog-title {
+  font-weight: bold;
+}

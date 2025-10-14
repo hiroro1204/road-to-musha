@@ -1,0 +1,38 @@
+@use "../../global" as g;
+
+/*!
+layout > header > header-head
+------------------------------
+*/
+.header-head-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+
+  @include g.mq() {
+    height: 75px;
+  }
+}
+
+.header-logo {
+  width: 180px;
+
+  @include g.mq(sm) {
+    width: 320px;
+  }
+}
+
+.header-search {
+  margin-left: auto;
+  margin-right: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header-search {
+    margin-right: 32px;
+  }
+}
+
+.header-search-button {
+  text-decoration: underline;
+}

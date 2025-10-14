@@ -1,0 +1,112 @@
+@use "../global" as g;
+
+/*!
+component > pagination
+------------------------------
+*/
+
+// .c-pagination {
+//   margin-top: 40px;
+//   display: flex;
+//   justify-content: center;
+//   gap: 8px;
+// }
+
+// .c-pagination-item {
+//   width: 35px;
+//   height: 35px;
+//   display: grid;
+//   place-items: center;
+//   background-color: var(--color-bg-gray);
+//   font-size: 14px;
+
+//   &--prev {
+//     @include g.arrow(-135deg);
+//   }
+
+//   &--next {
+//     @include g.arrow();
+//   }
+// }
+
+// .is-pagination-active {
+//   background-color: var(--color-bg-black);
+//   color: var(--color-font-white);
+// }
+
+/*!
+component > pagination（wordpressのデフォルト）
+------------------------------
+*/
+
+.pagination {
+  margin-top: 40px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-numbers {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  background-color: var(--color-bg-gray);
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-numbers.prev {
+  position: relative;
+}
+.page-numbers.prev::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(-135deg);
+}
+
+.page-numbers.next {
+  position: relative;
+}
+.page-numbers.next::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: rotate(45deg);
+}
+
+.page-numbers.current {
+  background-color: var(--color-bg-black);
+  color: var(--color-font-white);
+}
+
+.page-numbers.dots {
+  background-color: transparent;
+  color: var(--color-font-gray);
+}
+
+.page-numbers.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

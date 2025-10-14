@@ -1,0 +1,22 @@
+/*!
+component > breadcrumbs（Breadcrumb NavXT）
+------------------------------
+*/
+
+.c-breadcrumbs {
+  background-color: var(--color-bg-primary);
+  color: var(--color-font-white);
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.c-breadcrumbs-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 現在のページには下線をつけない */
+.c-breadcrumbs-inner > span:not(:last-child) {
+  text-decoration: underline;
+}
